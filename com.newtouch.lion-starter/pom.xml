@@ -1,21 +1,53 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.newtouch.lion</groupId>
-  <artifactId>com.newtouch.lion-starter</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>com.newtouch.lion-starter Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <finalName>com.newtouch.lion-starter</finalName>
-  </build>
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.newtouch.lion</groupId>
+		<artifactId>com.newtouch.lion-parent</artifactId>
+		<version>0.0.2-SNAPSHOT</version>
+		<relativePath>../com.newtouch.lion-parent/pom.xml</relativePath>
+	</parent>
+	<artifactId>com.newtouch.lion-webadmin</artifactId>
+	<name>com.newtouch.lion-webadmin</name>
+	<version>${lion-webadmin.version}</version>
+	<packaging>war</packaging>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- lion Start -->
+		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-data</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-im</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-web</artifactId>
+		</dependency>
+		<!-- lion End -->
+	</dependencies>
+	<build>
+		<finalName>com.newtouch.lion-webmain</finalName>
+	</build>
 </project>
