@@ -29,6 +29,7 @@
 			<tx:method name="check*"  read-only="true"   propagation="SUPPORTS" />
 			<tx:method name="doGet*"  read-only="true"  propagation="SUPPORTS" />
 			<tx:method name="do*"     propagation="REQUIRED" />
+			<tx:method name="save*"   propagation="REQUIRED"/>
 			<tx:method name="ido*"    propagation="REQUIRES_NEW" />
 			<tx:method name="*"       propagation="SUPPORTS" />
 			<!-- 必须在事务中运行 -->

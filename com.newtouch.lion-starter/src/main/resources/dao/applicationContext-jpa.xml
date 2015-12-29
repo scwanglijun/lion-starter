@@ -19,6 +19,7 @@
 	<!-- 配置hibernate session工厂 -->
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
+		<property name="persistenceUnitName" value="entityUnit"/>
 		<property name="persistenceProvider" ref="persistenceProvider" />
 		<!-- <property name="persistenceXmlLocation" value="classpath:META-INF/persistence-mysql.xml"></property>--> 
 		<property name="mappingResources">
@@ -29,6 +30,7 @@
 				<value>model/system/bas_common.${database.prefix}.orm.xml</value>
 				<value>model/system/bas_login_log.${database.prefix}.orm.xml</value>
 				<value>model/system/bas_system.${database.prefix}.orm.xml</value>
+				<value>model/demo/bas_person.mysql.orm.xml</value>
 			</list>
 		</property>
 		<property name="jpaProperties">
